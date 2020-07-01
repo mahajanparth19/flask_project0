@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -18,7 +18,14 @@ def projects():
 	name = 'projects'
 	return render_template("projects.html",static_url_path="/static",name=name)
 
-@app.route("/feedback")
+
+@app.route("/feedback", methods=["GET", "POST"])
 def feedback():
-	name = 'feedback'
-	return render_template("feedback.html",static_url_path="/static",name=name)
+    if request.method == "POST":
+    	name = request.form.get("name")
+    	email = request.form.get("email")
+    	comment = request.form.get("comment")
+    	return render_template("submit.html",static_url_path="/static",name=name,email = email, comment = comment)
+    else:
+    	name = 'feedback'
+    	return render_template("feedback.html",static_url_path="/static",name=name)
