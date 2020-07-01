@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+
+{% block css %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='projects.css') }}">{% endblock%}
+
+{% block body %}
+   
+<h1 id="title">My Projects</h1>
+
+<p class="text col-lg-7 grow">
+  In the span of 2 years i have had the opportunity to work on some projects which helped me get introduced to some different 
+  platforms as well as new programming languages. Some of which i am currently woking on.
+</p>
+
+<h1 id="title">Recent Projects</h1>
+
+<div class="heads">Automatic lights control</div>
+
+  <p class="text col-lg-7 grow float" >
+    This was the first project that got me involved with arduino and its sensors. In this project i used 2 pir sensors which were used
+    to detect a person and also to identify the direction of movement of the person so that it can decided whether the person is entering
+    or leaving. And if the number of persons was more than 1 the lights would remain on. The same data was sent to blynk servers from where 
+    the user could look at the active time and number of persons. 
+  </p>
+  <img src="{{ url_for('static', filename='./images/led.jpg') }}" class="img-fluid imageR" alt="Responsive image" >
+
+
+
+  <div class="col-lg-12">
+  <div class="heads">Robotic Arm</div>
+  <img src="{{ url_for('static', filename='./images/robo.jpg') }}" class="img-fluid imageL float" alt="Responsive image" >
+  <p class="text col-lg-10 grow" >
+    This was for a workshop organized by the institute in this the first 2 projects were for the basic operations of the robotic arm
+    while the third one was upto us to design a functionality for the arm. In this our team decide to make a tic tac toe playing robot
+    In this the user entered there move and the robotic arm decides its optimal move and then the arm moved to that place on the 
+    board to place its cap on the said place. In this project i learned about the motor shield and library and also about taking input from 
+    pc and sending to arduino.
+  </p>
+</div>
+
+  <div class="heads extra" >Laser Turret</div>
+
+  <p class="text col-lg-7 grow float" >
+    I saw video about making a laser turret with servos and controlling it with mouse and i implemented the same. In that program i used
+    visual studio and c# to take coordinates of mouse inside the window and then those were sent to arduino which then sent the same to servos
+    and the servos moved accordingly.
+  </p>
+  <img src="{{ url_for('static', filename='./images/laser.jpg') }}" class="img-fluid imageR" alt="Responsive image" >
+
+
+  <div class="col-lg-12">
+    <div class="heads">Rescue</div>
+    <img src="{{ url_for('static', filename='./images/rescue1.jpg') }}" class="img-fluid imageL float extras" alt="Responsive image" >
+    <p class="text col-lg-10 grow" >
+      This was a project which we made for our submission in SIH. In this we made a system in which the location of the phone were sent to 
+      our own server hosted on a raspberry pi. The proposed system could be used to detect persons who are lost and do not have internet connectivty
+      The raspberry pi was mounted to drone which then goes over the loaction and retrieves data. And this data can be used by the Rescue
+      team for detecting the location. In this i learned about programming and using raspberry pi and 
+      interfacing it with sensors. Also in this project i used php and html to create get requests so that the phone sent the get request 
+      and the data from request was stored on database and google maps api were used to display the coordinates on website for the rescue team
+
+    </p>    
+  </div>
+
+  <div class="heads extra" >Chrome Dino Automator</div>
+
+
+  <p class="text col-lg-7 grow float" >
+    In this i automated the dino game in crome. Using the python libraries for keypress as well as image detection. I used pillow library
+    to detect the obstacle and then the key was pressed. The obstacle was detected and based on its height the dinosaur jumped or ducked
+    and i handled the transition to dark mode by taking a refrence point which made sure that the obstacle is different from background
+    and i also handled the increasing speed of the movement
+  </p>
+  <img src="{{ url_for('static', filename='./images/dino.gif') }}" class="img-fluid imageR extras" alt="Responsive image" >
+
+  <h1 id="title">Currently working on</h1>
+
+  <div class="heads">Discord Bot</div>
+  
+    <p class="text col-lg-7 grow float" >
+      I made a discord bot which can play songs as weel as skip,stop,pause songs. In this i implemented queue so that users can add songs to 
+      queue while the current song is being played. For this i used the youtube api which gave the videos link from its name 
+      and using this link a stream was created using ytdl library and i also added the ablility to randomly playing songs
+      in which it searched the youtube trending and added a random song to queue. Currently improving its capabilities and Some
+      exception handling.
+    </p>
+    <img src="{{ url_for('static', filename='./images/discord.jpg') }}" class="img-fluid imageR" alt="Responsive image" >
+  
+  
+  
+    <div class="col-lg-12">
+    <div class="heads">Library Management</div>
+    <img src="{{ url_for('static', filename='./images/lib.jpg') }}" class="img-fluid imageL float" alt="Responsive image" >
+    <p class="text col-lg-10 grow" >
+      In this ia am currently creating a database using python and creating the Required pl/sql blocks as well as functions and procedures
+      and then i will try to create the frontend for same so that a full software can be prepared where a librarian can issue books
+      and the user can view there details and issue or return books and calculate their fine.
+    </p>
+  </div>
+  
+    <div class="heads extra" >Smart Charger</div>
+  
+    <p class="text col-lg-7 grow float" >
+      In this i am trying to create an app which runs in background and when the battery its reaching its capacity sends a request to 
+      the node mcu and then the node mcu triggers the relay board which controls the charger as it will change the state of
+      charger from on to off and if the battery falls below some specified level it again starts charging so that the battery remains 
+      at optimal level  
+    </p>
+    <img src="{{ url_for('static', filename='./images/relay.jpg') }}" class="img-fluid imageR" alt="Responsive image" >
+
+{% endblock %}

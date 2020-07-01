@@ -1,0 +1,55 @@
+.active4{
+  text-shadow: 0 0 3px #1230da;
+}
+
+.forms{
+    margin-top: 1%;
+    margin-left: 10%;
+    align-items: center;
+    width: 60%;
+    
+}
+
+.float{
+    float: left;
+}
+.text{
+    margin-left: 15%;
+    margin-top: 3%;
+    color: white;
+    font-size: 20vx;
+    text-align: justify;
+    font-weight: bold;
+    margin-right: 2%;
+}
+
+@media (max-width: 499px) {
+    .text{
+        font-size: small;
+    }
+}
+.grow {
+    padding-left: 5%;
+  }
+  
+  .grow:hover {
+    text-shadow: 0 0 6px #1230da;
+  }
+  
+  @media (min-width: 600px){
+    .grow {
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .grow:hover {
+      transform: scale(1.2);
+    }
+  }
+  
+
+
+    .tab{
+        margin-left: 10%;
+        margin-bottom: 5%;
+        padding-top: 3%;
+    }

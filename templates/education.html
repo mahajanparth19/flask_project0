@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+
+{% block css %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='education.css') }}">{% endblock%}
+
+{% block body %}
+
+<h1 id="title">Technical Background</h1>
+<p class="text col-lg-7 grow">
+  I completed my schooling from D.A.V international school, Amritsar After that i am currently studying in thapar university.
+  I have experience in various programming languages some of which were a part of the curriculum
+  while others i started just for fun. 
+  <br> Some of the languages i know:
+</p>
+
+  <div class="bor">
+  <div class="heads">C/C++</div>
+
+  <p class="text col-lg-7 grow float" >
+    These were a part of course curriculum but i also had some prior experience due to CS50's introduction to computer science. Where i
+    learned the basics of c as well advanced concepts such as pointers and memory. With this i also wrote my own code in these and i am able 
+    to write easily in C.
+  </p>
+  <img src="{{ url_for('static', filename='./images/c.jpg') }}" class="img-fluid imageR" alt="Responsive image" >
+</div>
+
+
+  <div class="bor">
+  <div class="heads">JAVA</div>
+  <img src="{{ url_for('static', filename='./images/java.jpg') }}" class="img-fluid imageL float" alt="Responsive image" >
+  <p class="text col-lg-10 grow" >
+    I learned Java in 11th and 12th standard and i have worked on basic java applications using netbeans
+    where a windows in displayed and user is presented with various inputs sucha as text fields, radio buttons , combo boxes etc,
+    Also we did a project where we integrated this with mysql database
+  </p>
+</div>
+
+
+
+<div class="bor">
+  <div class="heads extra" >Python</div>
+
+  <p class="text col-lg-7 grow float" >
+    I had no formal training in python but by starting with some projects i was able to do basic scripting in python.
+    I have worked on connecting databases with python as well some image recognition libraries i was able to basic image operations as
+    well as controlling keyboard input using python. I also have done data cleaning for ML using python.
+  </p>
+  <img src="{{ url_for('static', filename='./images/python.jpg') }}" class="img-fluid imageR" alt="Responsive image" >
+</div>
+
+  <div class="bor">
+    <div class="heads">Arduino</div>
+    <img src="{{ url_for('static', filename='./images/arduino.jpg') }}" class="img-fluid imageL float" alt="Responsive image" >
+    <p class="text col-lg-10 grow" >
+       Arduino is not a programming language but i have made some projects with arduino as well using various sensors as well as
+       using the wifi chip in node mcu to host web servers and controlling the sensors and leds using internet and sending requests remotely 
+       to arduino
+    </p>    
+  </div>
+
+
+
+</p>
+
+{% endblock %}

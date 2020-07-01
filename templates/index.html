@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+
+{% block css %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">{% endblock%}
+
+{% block body %}
+
+<h1 id="title">Welcome To My First Website</h1>
+<div class="col-lg-12">
+<p class="text float col-lg-7 grow">
+  This is my first Website built entirely using html and css for the project0 of cs50's web programming with javascript and python.
+  In this website i am going to introduce you to Parth Mahajan. I belong to Amritsar, Punjab and i am currently pursuing B.Tech in Computers
+  From thapar University, Patiala. 
+</p>
+<img src="{{ url_for('static', filename='./images/home.jpg') }}" class="img-fluid image" alt="Responsive image" >
+</div>
+
+<h2><b>About me</b></h2>
+<div class="col-lg-12">
+<p class="text col-lg-7 grow">
+  I am currently pursuing a degree in computer engineering which has got me to experiment with programming and other computers stuff. 
+  But with all this i also have some hobbies. I have interest in outdoor games as well as mobile games.
+  <br>Some of the games i have played:
+</p>
+</div>
+
+<div class="heads ">Csgo</div>
+
+<p class="text col-lg-7 grow float" >This is an online multiplayer game where you have to neutrailize the enemy team before they do the same or complete the 
+  objective assigned to your team. This is one my favourite games as it requires skill, patience and a good sense of team work
+  as a it difficult for a person to win this game without team coordination
+</p>
+<img src="{{ url_for('static', filename='./images/index.jpg') }}" class="img-fluid image" alt="Responsive image" >
+
+
+<p class="text col-lg-7 grow ">
+  I also love outdoor games such as i have played Cricket, Badminton as well as indoor games such as table tennis, chess etc.
+  Except All this i also love to learn new things which led me to reading books and i enjoy movies and shows alot. Such as i still am asking
+  myself was the end in inception a dream or reality. Also i love hardware and have actually opened up my laptop for minor cleaning as well as 
+  Thermal gel replacement and was looking on how to remove the screen altogether.
+</p>
+
+
+
+<a class="text ext" href="{{ url_for('education') }}">Want to know More about me then click on this link</a>
+
+
+{% endblock %}
+
